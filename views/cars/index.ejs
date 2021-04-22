@@ -1,0 +1,26 @@
+<% layout("./layout/boilerplate") %>
+<img class="h-96 object-cover w-full object-middle rounded-lg"
+    src="https://unsplash.com/photos/jwyO3NhPZKQ"
+    alt="">
+<p class="mt-12 text-gray-600 text-3xl tracking-wide italic">The Best EVs</p>
+<ul class="mt-4 flex flex-wrap">
+    <% for (let car of cars) {%>
+    <li class="sm:w-1/2 lg:w-3/12 mb-12 pr-6 group-hover:text-green-700">
+
+        <a class="hover:text-green-700" href="cars/<%= car.id %>">
+            <!-- <img class="h-48 object-cover w-full rounded-lg" src="<%=car.image[0].url%>" alt=""> -->
+            <div class="mt-2 flex justify-between">
+                <div>
+                    <p class="text-3xl tracking-wide"><%= car.name %></p>
+                    <p class="text-gray-400 text-xs"><%= car.description %></p>
+                    <p class="text-xs text-green-700 mt-1">Opened: <%= car.name %></p>
+                    <p class="mt-1"><%= car.description %></p>
+                </div>
+                <div>
+                    <p class="mt-2 text-right"><%= car.price %></p>
+                </div>
+            </div>
+        </a>
+    </li>
+    <% } %>
+</ul>

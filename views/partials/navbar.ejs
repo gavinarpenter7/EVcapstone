@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent navbar md navbar-expand-lg justify-start navbar-light bg-gradient-to-r from-green-700 to-gray-400">
+    <div class="container pl-6 text-white flex items-left ">
+        <a href="https://laincubator.org/"><img class="object-fill" src="/images/laci-logo-silver-dark.png" width="45px" height="45px" /></a>
+        <a class="navbar-brand pl-10 text-3xl font-thin leading-normal mt-0 mb-2 text-white antialiased" href="/cars">Electric Vehicle Selector</a>
+        <button class="navbar-toggler rounded bg-gray-50 hover:bg-gray-300 active:bg-green-700" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bg-transparent" id="navbarNavDropdown">
+            <div class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white justify-right subpixel-antialiased font-thin" aria-current="page" href="/cars">All EVs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active font-thin text-white justify-right subpixel-antialiased" href="/cars/new" href="/cars/new">Create EV+</a>
+                </li>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <% if(!user) { %>
+                <li class="nav-item">
+                    <a class="nav-link active font-thin text-white justify-right subpixel-antialiased" aria-current="page" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active font-thin text-white justify-right subpixel-antialiased" href="/register">Register</a>
+                </li>
+                <% }  else { %>
+                <li class="nav-item">
+                    <a class="nav-link">Welcome, <%= user.username  %> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active font-thin text-white justify-right subpixel-antialiased" href="/logout">Logout</a>
+                </li>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</nav>

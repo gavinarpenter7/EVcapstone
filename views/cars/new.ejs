@@ -1,0 +1,86 @@
+<% layout("./layout/boilerplate") %>
+<h1 class="text-center text-4xl font-normal leading-normal mt-5 mb-2 text-white">Create a New Electric Vehicle</h1>
+<div class="w-3/4 md:w-1/2 mx-auto col-6 offset-3">
+    <form class="needs-validation" action="/cars" method="POST" novalidate enctype="multipart/form-data">
+        <div class="mb-3 mt-4">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="name">Make</label>
+            <input class="form-control pl-5 px-2 mx-auto py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="name" name="car[name]" placeholder="e.g. Tesla" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="model">Model</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="model" name="car[model]" placeholder="e.g. S" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="year">Year of Production</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="year" name="car[year]" placeholder="e.g. 2020" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="price">Price</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="price" name="car[price]" placeholder="e.g. $69,420" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="body">Body Style</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="body" name="car[body]" placeholder="e.g. Sedan" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="description">Description</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="description" name="car[description]" placeholder="e.g.  All-electric five-door liftback sedan." required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="tripRange">Trip Range</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="tripRange" name="car[tripRange]" placeholder="e.g. 402 miles." required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="driveTrain">Drive Train</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="driveTrain" name="car[driveTrain]" placeholder="e.g. AWD" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="fullChargeTime">Full-Charge Time</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="fullChargeTime" name="car[fullChargeTime]" placeholder="e.g. 10 hours" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="quickChargeTime">Quick-Charge Time</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="quickChargeTime" name="car[quickChargeTime]" placeholder="e.g. 40 mins" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="ownershipCostOverTime">Ownership Cost over 5 Years</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="ownershipCostOverTime" name="car[ownershipCostOverTime]" placeholder="e.g. $98,000" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="selfDriving">Auto Pilot Feature</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="selfDriving" name="car[selfDriving]" placeholder="e.g. Beta" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="passengers">Number of Passengers</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="passengers" name="car[passengers]" placeholder="e.g. 5" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="storageSize">Cargo Space</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="storageSize" name="car[storageSize]" placeholder="e.g. 60.2 cubic feet" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="costToInsureAnnual">Average Annual Insurance Cost</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="costToInsureAnnual" name="car[costToInsureAnnual]" placeholder="e.g. $2,220" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="chargerType">Charger Type</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="chargerType" name="car[chargerType]" placeholder="e.g. Type-2" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="zeroSixty">Zero to Sixty Time</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="zeroSixty" name="car[zeroSixty]" placeholder="e.g. 2.4 seconds" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label text-lg font-light leading-relaxed mt-3 mb-3 text-white" for="hp">Horsepower</label>
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="text" id="hp" name="car[hp]" placeholder="e.g. 670-1,020" required>
+          </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Restaurant Images</label>
+            <input class="form-control" type="file" id="formFile" name="image" multiple>
+        </div>
+        <div class="mb-3 ml-20 pl-20 pt-3 pr-20 mr-20">
+            <button class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-base px-10 py-2 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-20  mb-3 mt-4 ease-linear transition-all duration-150 transform hover:scale-110 hover:bg-green-700 motion-reduce:transform-none">Submit</button>
+        </div>
+    </form>
+    <a href="/restaurants">Go back to all the restaurants</a>
+</div>
