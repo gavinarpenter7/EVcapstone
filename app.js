@@ -20,6 +20,9 @@ const User = require('./models/user');
 const carRoutes = require('./routes/cars');
 const reviewRoutes = require('./routes/reviews');
 const authRoutes = require('./routes/users');
+const multer = require('multer');
+const { storage } = require('/Users/gavin/Desktop/EVCapstone1/cloudinary/index.js');
+const upload = multer({ storage });
 
 const MongoStore = require('connect-mongo');
 

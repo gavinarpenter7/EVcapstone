@@ -26,6 +26,18 @@ mongoose
 			name: "Tesla",
 			model: "X",
 			year: "2020",
+			image: [
+				{
+					url:
+						'https://res.cloudinary.com/dxg5gei8r/image/upload/v1616630319/Laci%20Capstone/eeyytsqq0fls4n6gaae0.jpg',
+					filename: 'Laci Capstone/eeyytsqq0fls4n6gaae0',
+				},
+				{
+					url:
+						'https://res.cloudinary.com/dxg5gei8r/image/upload/v1616630319/Laci%20Capstone/dztv3cb3acvishlrsoie.jpg',
+					filename: 'Laci Capstone/dztv3cb3acvishlrsoie',
+				},
+			],
 			price: "$80,000",
 			body: "SUV",
 			description: "Mid-size all electric luxury crossover with rear falcon wing doors.",
@@ -47,6 +59,18 @@ mongoose
 			name: "Audi",
 			model: "e-tron",
 			year: "2021",
+			image: [
+				{
+					url:
+						'https://res.cloudinary.com/dxg5gei8r/image/upload/v1616630319/Laci%20Capstone/eeyytsqq0fls4n6gaae0.jpg',
+					filename: 'Laci Capstone/eeyytsqq0fls4n6gaae0',
+				},
+				{
+					url:
+						'https://res.cloudinary.com/dxg5gei8r/image/upload/v1616630319/Laci%20Capstone/dztv3cb3acvishlrsoie.jpg',
+					filename: 'Laci Capstone/dztv3cb3acvishlrsoie',
+				},
+			],
 			price: "$65,000",
 			body: "SUV",
 			description: "Four door all electric crossover.",

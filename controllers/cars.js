@@ -51,6 +51,7 @@ module.exports.renderEdit = async (req, res) => {
 };
 
 module.exports.updateCar = async (req, res) => {
+	console.log(req.files)
 	const { id } = req.params;
 	const car = await Car.findByIdAndUpdate(id, {
 		...req.body.car,
@@ -59,6 +60,7 @@ module.exports.updateCar = async (req, res) => {
 		url: f.path,
 		filename: f.filename,
 	}));
+
 	car.image.push(...imgs);
 	await car.save();
 	if (req.body.selectedImages) {

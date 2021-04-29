@@ -1,5 +1,4 @@
 <% layout("./layout/boilerplate") %>
-
 <h1 class="text-center">Edit <%=car.name%></h1>
 <div class="w-3/4 md:w-1/2 mx-auto col-6 offset-3">
     <form class="needs-validation" action="/cars/<%= car.id %>/?_method=PUT" method="POST" novalidate enctype="multipart/form-data">
@@ -77,65 +76,23 @@
         </div>
           <div class="text-lg font-light leading-relaxed mt-6 mb-3 text-white">
             <label class="mb-3" for="image">Insert Image</label>
-            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="file" name="car[image]" id="image">
+            <input class="form-control px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full" type="file" name="image" id="formFile" multiple>
             </div>
+            <div class="mb-3">
+              <h2>Delete Images</h2>
+              <% car.image.forEach(function(img, i) { %>
+              <p>
+                  <label class="fancy-checkbox-label" for="image<%=i%>">
+                      <input type="checkbox" name="selectedImages[]" id="image<%=i%>" value="<%=img.filename%>">
+                      <span class="fancy-checkbox fancy-checkbox-img"></span>
+                      <img src="<%= img.url%>" class="img-thumbnail" alt="" id="image<%=i%>">
+                  </label>
+              </p>
+              <% }) %>
+          </div>
+
           <button class="mt-3 bg-green-500 text-white active:bg-green-600 font-bold uppercase text-base px-8 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 transform hover:scale-110 hover:bg-green-700 motion-reduce:transform-none">Submit</button>
       </form>
       <div class="mt-3 text-white">
       <a href="/cars/<%= car.id%>">Go back to <%= car.name %></a>
       </div>
-
-    <!-- <form class="needs-validation" action="/cars/<%=car.id%>/?_method=PUT" method="POST" novalidate
-        enctype="multipart/form-data">
-        <div class="mb-3">
-            <label class="form-label" for="name">Name</label>
-            <input class="form-control" type="text" id="name" name="restaurant[name]" value="<%= restaurant.name %>"
-                required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="location">Restaurant Location</label>
-            <input class="form-control" type="text" id="location" name="restaurant[location]"
-                value="<%= restaurant.location %>" required>
-        </div>
-        <div class=" mb-3">
-            <label class="form-label" for="price">Restaurant Price</label>
-            <select class="form-control" name="restaurant[price]" id="price" value="<%= restaurant.price %>" required>
-                <option value=" $">$</option>
-                <option value="$$">$$</option>
-                <option value="$$$">$$$</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="description">Restaurant Description</label>
-            <input class="form-control" type="text" id="description" name="restaurant[description]"
-                value="<%= restaurant.description %>" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="dateOpened">Restaurant Open Date</label>
-            <input class="form-control" type="text" id="dateOpened" name="restaurant[dateOpened]"
-                value="<%= restaurant.dateOpened %>" required>
-        </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Restaurant Images</label>
-            <input class="form-control" type="file" id="formFile" name="image" multiple>
-        </div>
-
-        <div class="mb-3">
-            <h2>Delete Images</h2>
-            <% restaurant.image.forEach(function(img, i) { %>
-            <p>
-                <label class="fancy-checkbox-label" for="image<%=i%>">
-                    <input type="checkbox" name="selectedImages[]" id="image<%=i%>" value="<%=img.filename%>">
-                    <span class="fancy-checkbox fancy-checkbox-img"></span>
-                    <img src="<%= img.url%>" class="img-thumbnail" alt="" id="image<%=i%>">
-                </label>
-            </p>
-            <% }) %>
-        </div>
-        <div class=" mb-3">
-            <button class="btn btn-success">Submit</button>
-        </div>
-    </form>
-    <a href="/restaurants/<%= restaurant.id%>">Go back to <%= restaurant.name %></a>
-
-</div> -->
